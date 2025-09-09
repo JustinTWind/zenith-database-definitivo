@@ -1,0 +1,12 @@
+INSERT INTO dbo.users (user_id, user_role_id, full_name, email, password_hash, created_at, updated_at)
+VALUES
+('U201','R102','Dr. Ricardo Méndez','ricardo.mendez@ejemplo.com','pwdhash201',SYSDATETIME(),SYSDATETIME()),
+('U202','R102','Dra. Teresa Flores','teresa.flores@ejemplo.com','pwdhash202',SYSDATETIME(),SYSDATETIME()),
+('U203','R102','Lic. Alberto Díaz','alberto.diaz@ejemplo.com','pwdhash203',SYSDATETIME(),SYSDATETIME()),
+('U204','R102','Mtra. Julia Vargas','julia.vargas@ejemplo.com','pwdhash204',SYSDATETIME(),SYSDATETIME()),
+('U205','R102','Dr. Ernesto Bravo','ernesto.bravo@ejemplo.com','pwdhash205',SYSDATETIME(),SYSDATETIME()),
+('U206','R103','Rosa Aguilar','rosa.aguilar@ejemplo.com','pwdhash206',SYSDATETIME(),SYSDATETIME()),
+('U207','R103','Gabriel Soto','gabriel.soto@ejemplo.com','pwdhash207',SYSDATETIME(),SYSDATETIME()),
+('U208','R103','Marisol Cárdenas','marisol.cardenas@ejemplo.com','pwdhash208',SYSDATETIME(),SYSDATETIME()),
+('U209','R103','Jorge Medina','jorge.medina@ejemplo.com','pwdhash209',SYSDATETIME(),SYSDATETIME()),
+('U210','R103','Elena Ramírez','elena.ramirez@ejemplo.com','pwdhash210',SYSDATETIME(),SYSDATETIME());
