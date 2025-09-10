@@ -1,0 +1,10 @@
+-- ======================================
+-- 4. PROFESSIONALS (referencian a U201..U205)
+-- ======================================
+INSERT INTO dbo.professionals (professional_id, user_id, specialty, biography, years_experience)
+VALUES
+('P201','U201','Psiquiatría','Atención en depresión y ansiedad',14),
+('P202','U202','Psicología Clínica','Terapia individual para adultos',9),
+('P203','U203','Neuropsicología','Evaluaciones cognitivas y memoria',6),
+('P204','U204','Terapia Familiar','Conflictos en dinámica familiar',8),
+('P205','U205','Psicopedagogía','Apoyo en problemas de aprendizaje',11);
