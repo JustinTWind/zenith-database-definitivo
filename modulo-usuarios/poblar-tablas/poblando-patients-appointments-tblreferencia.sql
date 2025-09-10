@@ -49,8 +49,10 @@ ADD session_type_id VARCHAR(10) NOT NULL
     CONSTRAINT FK_Appointments_SessionType
     FOREIGN KEY (session_type_id) REFERENCES session_types(session_type_id);
 
+
  -- Poblando Appointments con session_type_id como FK
-INSERT INTO appointments (appt_id, patient_id, professional_id, appt_at, modality_id, session_type_id, location, created_at, updated_at)
+INSERT INTO appointments 
+(appt_id, patient_id, professional_id, appt_at, modality_id, session_type_id, location, created_at, updated_at)
 VALUES
 ('APT001', 'PAT001', 'PRF001', '2025-09-15 10:00:00', 'MTD002', 'SST001', 'Consultorio 101 - Bogotá', SYSDATETIME(), SYSDATETIME()),
 ('APT002', 'PAT002', 'PRF002', '2025-09-16 14:00:00', 'MTD001', 'SST001', 'Google Meet', SYSDATETIME(), SYSDATETIME()),
@@ -84,3 +86,4 @@ VALUES
 ('APT028', 'PAT008', 'PRF004', '2025-10-13 09:30:00', 'MTD002', 'SST002', 'Consultorio 240 - Manizales', SYSDATETIME(), SYSDATETIME()),
 ('APT029', 'PAT009', 'PRF005', '2025-10-14 13:00:00', 'MTD001', 'SST002', 'Google Meet', SYSDATETIME(), SYSDATETIME()),
 ('APT030', 'PAT010', 'PRF006', '2025-10-15 10:00:00', 'MTD002', 'SST002', 'Consultorio 330 - Cúcuta', SYSDATETIME(), SYSDATETIME());
+
