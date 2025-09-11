@@ -1,6 +1,6 @@
 --Crear Procedmiento de almacenado para listar Usuarios Activos en la sala del chat
 
-CREATE PROCEDURE Listar_Activos
+CREATE PROCEDURE usp_ListarActivos
 AS
 BEGIN
 	select room_id as ID_Sala,
@@ -12,7 +12,7 @@ BEGIN
 END
 GO;
 --Creando procedimiento almacenado para filtrar numero mensajes por usuario 
-CREATE PROCEDURE Filter_Menssage
+CREATE PROCEDURE usp_FilterMenssage
 @number_Words INT
 AS
 BEGIN
