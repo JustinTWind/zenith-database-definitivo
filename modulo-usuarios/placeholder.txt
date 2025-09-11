@@ -10,3 +10,18 @@ VALUES
 ('U208','R103','Marisol Cárdenas','marisol.cardenas@ejemplo.com','pwdhash208',SYSDATETIME(),SYSDATETIME()),
 ('U209','R103','Jorge Medina','jorge.medina@ejemplo.com','pwdhash209',SYSDATETIME(),SYSDATETIME()),
 ('U210','R103','Elena Ramírez','elena.ramirez@ejemplo.com','pwdhash210',SYSDATETIME(),SYSDATETIME());
+
+
+CREATE PROCEDURE usp_GetUsersAscByRole
+    @user_role_id VARCHAR(10)
+AS
+BEGIN
+    SELECT *
+    FROM users
+    WHERE user_role_id = @user_role_id
+    ORDER BY 
+    LEFT(full_name, 4), 
+    CAST(SUBSTRING(full_name, 6, LEN(full_name)) AS INT); 
+END;
+
+exec usp_GetUsersAscByRole 'ROL001'
