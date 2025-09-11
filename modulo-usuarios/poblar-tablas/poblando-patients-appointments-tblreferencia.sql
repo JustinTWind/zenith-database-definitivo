@@ -87,3 +87,19 @@ VALUES
 ('APT029', 'PAT009', 'PRF005', '2025-10-14 13:00:00', 'MTD001', 'SST002', 'Google Meet', SYSDATETIME(), SYSDATETIME()),
 ('APT030', 'PAT010', 'PRF006', '2025-10-15 10:00:00', 'MTD002', 'SST002', 'Consultorio 330 - Cúcuta', SYSDATETIME(), SYSDATETIME());
 
+
+
+CREATE PROCEDURE usp_InsertUser
+    @user_id VARCHAR(10),
+    @user_role_id VARCHAR(10),
+    @full_name NVARCHAR(100),
+    @email NVARCHAR(100),
+    @password_hash NVARCHAR(100)
+AS
+BEGIN
+    INSERT INTO users (user_id,user_role_id, full_name, email, password_hash, created_at, updated_at)
+    VALUES (@user_id,@user_role_id, @full_name, @email, @password_hash, GETDATE(), GETDATE());
+END;
+GO
+
+exec usp_InsertUser 'USR051','ROL002','User51','User51@example.com','hash51'
