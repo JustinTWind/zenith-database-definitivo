@@ -21,7 +21,7 @@ VALUES
 -- Insertar roles de evento
 INSERT INTO event_role (event_role_id, event_role_name, event_role_description)
 VALUES
-    ('ETR001', 'Speaker', 'Persona encargada de dar una charla, conferencia o presentación.'),
+    ('ETR001', 'Ponente', 'Persona encargada de dar una charla, conferencia o presentación.'),
     ('ETR002', 'Asistente', 'Participante general del evento.'),
     ('ETR003', 'Moderador', 'Encargado de coordinar las intervenciones y mantener el orden del evento.'),
     ('ETR004', 'Organizador', 'Miembro del staff encargado de la logística y coordinación del evento.'),
