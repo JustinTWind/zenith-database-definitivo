@@ -42,12 +42,6 @@ WHERE professional_id = 'PRF002';
 --ROLLBACK TRANSACTION;
 
 --HU049C5 
-INSERT INTO [projects] 
-([project_id], [professional_id], [name], [year], [description], [file_url], [created_at])
-VALUES
-(1, 'PRF001', 'MindCare', 2024, 'Plataforma digital de apoyo en terapia individual y familiar.', 'https://example.com/files/mindcare.pdf', GETDATE()),
-
-
 CREATE PROCEDURE insertar_proyecto(
  @project_id VARCHAR (10),
  @professional_id VARCHAR (10),
@@ -73,4 +67,22 @@ EXEC insertar_proyecto
     'Programa de psicología clínica enfocado en la prevención y tratamiento de ansiedad y depresión mediante sesiones virtuales y presenciales.', 
     'https://example.com/files/equilibrioemocional.pdf';
 
-    select * from projects
+    select * from users
+     select * from projects
+--HU047C5
+delete from projects
+where project_id = 'PRY013'
+select * from projects
+
+--HU050C5
+CREATE VIEW usp_Specialist_view AS
+SELECT
+    p.specialty,
+    u.full_name,
+    u.email
+FROM
+    professionals AS p
+JOIN
+    users AS u ON p.user_id = u.user_id;
+
+    SELECT * FROM usp_Specialist_view;
